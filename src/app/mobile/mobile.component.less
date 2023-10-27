@@ -1,0 +1,107 @@
+.mobile {
+    width: 100%;
+    background-color: #0d1419;
+
+    .mobile-content {
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        padding: 80px 0;
+        animation: zoomIn 2s ease-in-out;
+
+        @media(max-width:1220px) {
+            padding: 80px 35px;
+        }
+
+        @media(max-width:768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media(max-width:767px) {
+            padding: 80px 20px;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.2);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .right {
+            padding: 100px;
+
+            @media(max-width:1220px) {
+                padding: 30px;
+            }
+
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            color: white;
+            padding: 100px;
+
+            @media(max-width:1220px) {
+                padding: 0
+            }
+
+            @media(max-width:768px) {
+                text-align: center;
+                gap: 20px;
+            }
+
+
+            .title {
+                font-size: 28px;
+                line-height: 33px;
+                font-family: 'Pacifico', cursive;
+
+                @media(max-width:767px) {
+                    font-size: 28px;
+                }
+            }
+
+            .sub-title {
+                font-size: 75px;
+                line-height: 75px;
+                font-family: 'Roboto', sans-serif;
+
+                @media(max-width:767px) {
+                    font-size: 40px;
+                }
+            }
+
+            .text {
+                font-size: 27px;
+                line-height: 27px;
+                font-family: 'Roboto', sans-serif;
+
+                @media(max-width:767px) {
+                    font-size: 16px;
+                }
+            }
+
+            .btns {
+                display: flex;
+                gap: 40px;
+
+                @media(max-width:767px) {
+
+                    img {
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}

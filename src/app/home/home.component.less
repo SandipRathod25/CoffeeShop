@@ -1,0 +1,83 @@
+.home {
+    width: 100%;
+    background-color: #0d1419;
+
+    .home-content {
+        height: 85.6vh;
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        align-items: center;
+        color: white;
+        padding-top: 110px;
+        animation: zoomIn 2s ease-in-out;
+
+        @media(max-width:767px) {
+            height: 100vh;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.1);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .title {
+            font-size: 90px;
+            font-family: 'Pacifico', cursive;
+
+            @media(max-width:767px) {
+                font-size: 50px;
+            }
+        }
+
+        .text {
+            font-size: 16.5px;
+            font-family: 'Roboto', sans-serif;
+            max-width: 800px;
+            text-align: center;
+            line-height: 22px;
+
+            @media(max-width:1024px) {
+                width: 678px;
+            }
+
+            @media(max-width:768px) {
+                width: 478px;
+            }
+
+            @media(max-width:650px) {
+                width: 280px;
+            }
+        }
+
+        .btn {
+            button {
+                background-color: #0d1419;
+                padding: 12px 32px;
+                font-size: 18px;
+                border: 1px solid white;
+                color: white;
+                border-radius: 4px;
+                transition: background-color 0.5s ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #d6962c;
+                }
+
+                @media(max-width:767px) {
+                    padding: 12px 20px;
+                }
+            }
+        }
+    }
+}

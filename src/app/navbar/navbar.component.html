@@ -1,0 +1,55 @@
+<div class="navbar">
+    <div class="navbar-content">
+        <div class="top-navbar">
+            <div class="loss"></div>
+            <div class="phone">
+                <div class="first">
+                    <div class="icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <div class="content">
+                        <p>Order Coffee</p>
+                    </div>
+                </div>
+                <div class="first">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="content">
+                        <p>+55 123 456 78</p>
+                    </div>
+                </div>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-pinterest-p"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+        <div class="bottom-navbar">
+            <div class="lower">
+                <div class="logo" (click)="scrollToSection('home')">
+                    <img src="../../assets/logo.png" alt="">
+                </div>
+                <div class="links">
+                    <a (click)="scrollToSection('home')">Home</a>
+                    <a (click)="scrollToSection('about')">About</a>
+                    <a (click)="scrollToSection('feature')">New Feature</a>
+                    <a (click)="scrollToSection('gallery')">Gallery</a>
+                    <a (click)="scrollToSection('menu')">Menu</a>
+                </div>
+                <div class="menubar" (click)="handleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu" *ngIf="menu">
+        <a (click)="scrollToSection('home')">Home</a>
+        <a (click)="scrollToSection('about')">About</a>
+        <a (click)="scrollToSection('feature')">New Feature</a>
+        <a (click)="scrollToSection('gallery')">Gallery</a>
+        <a (click)="scrollToSection('menu')">Menu</a>
+    </div>
+</div>

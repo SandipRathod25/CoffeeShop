@@ -1,0 +1,145 @@
+.footer {
+    width: 100%;
+    background-image: url(../../assets/footerbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .footer-content {
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        padding: 80px 30px;
+
+        @media(max-width:1220px) {
+            padding: 80px 35px;
+        }
+
+        @media(max-width:768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media(max-width:767px) {
+            padding: 80px 20px;
+        }
+
+        .title {
+            font-size: 28px;
+            line-height: 37px;
+            font-family: 'Pacifico', cursive;
+
+            @media(max-width:767px) {
+                text-align: center;
+            }
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            max-width: 360px;
+
+            .address {
+                font-size: 16.5px;
+                line-height: 22px;
+                font-family: 'Roboto', sans-serif;
+                max-width: 200px;
+                text-align: center;
+            }
+
+            .phone {
+                font-size: 16.5px;
+                line-height: 22px;
+                font-family: 'Roboto', sans-serif;
+                max-width: 220px;
+                text-align: center;
+            }
+
+            .social {
+                display: flex;
+                gap: 10px;
+
+                .fa-facebook-f,
+                .fa-pinterest-p,
+                .fa-youtube,
+                .fa-twitter {
+                    color: #d6962c;
+                }
+            }
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            max-width: 360px;
+
+            :nth-child(2) {
+                margin-top: 20px;
+            }
+
+            .time {
+                font-size: 16.5px;
+                line-height: 22px;
+                font-family: 'Roboto', sans-serif;
+                max-width: 180px;
+                text-align: center;
+            }
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            max-width: 360px;
+            gap: 20px;
+
+            .title {
+                text-align: center;
+            }
+
+            .form-container {
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    input,
+                    textarea {
+                        font-size: 16.5px;
+                        padding: 6px 12px;
+                        width: 300px;
+                        background-color: #323232;
+                        border: none;
+                        border-radius: 4px;
+                    }
+
+                    textarea {
+                        height: 80px;
+                    }
+                }
+            }
+
+            .btn {
+                button {
+                    border: none;
+                    padding: 10px 20px;
+                    background-color: orange;
+                    border-radius: 4px;
+                    color: white;
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        background-color: rgb(219, 144, 3);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

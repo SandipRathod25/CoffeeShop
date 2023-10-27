@@ -1,0 +1,61 @@
+.footer {
+    width: 100%;
+    background-color: black;
+
+    .footer-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 27px 30px;
+
+        .title {
+            text-align: center;
+            width: 100%;
+            color: white;
+            font-size: 16.5px;
+            line-height: 22px;
+            font-family: 'Roboto', sans-serif;
+            animation: zoomIn 2s ease-in-out;
+
+            @media(max-width:768px) {
+                max-width: 600px;
+            }
+
+            @keyframes zoomIn {
+                from {
+                    transform: scale(0.2);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+
+        .scroll {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s ease-in-out;
+            background-color: #333;
+
+            .fa-angle-up {
+                color: white;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: orange;
+            }
+        }
+    }
+}

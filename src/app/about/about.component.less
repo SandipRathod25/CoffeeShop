@@ -1,0 +1,128 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.about {
+    width: 100%;
+    background: url(../../assets/bgc.jpg);
+
+    .about-content {
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        gap: 30px;
+        padding: 120px 0;
+        overflow: hidden;
+        opacity: 0;
+        animation: fadeInAndSlide 1s ease-in-out forwards;
+
+        @media(max-width:1230px) {
+            padding: 120px 35px;
+        }
+
+        @media(max-width:768px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media(max-width:767px) {
+            padding: 120px 20px;
+        }
+
+        .image {
+            width: 50%;
+
+            @media(max-width:768px) {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            animation: slideInLeft 1s ease-in-out;
+        }
+
+        .text {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            animation: slideInRight 1s ease-in-out;
+
+            @media(max-width:768px) {
+                width: 100%;
+            }
+
+            .about-us {
+                font-size: 28px;
+                line-height: 33px;
+                font-family: 'Pacifico', cursive;
+            }
+
+            .we {
+                font-size: 35px;
+                line-height: 37px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .text1,
+            .text2 {
+                color: #565656;
+                line-height: 22px;
+                font-size: 16.5px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .btn {
+                font-size: 15px;
+
+                button {
+                    border: none;
+                    padding: 10px 15px;
+                    background-color: #e7a331;
+                    border-radius: 4px;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    transition: 0.3s ease-in;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: darkorange;
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes fadeInAndSlide {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+}

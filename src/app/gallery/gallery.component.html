@@ -1,0 +1,32 @@
+<div class="gallery">
+    <div class="gallery-content">
+        <div class="title">
+            <p>Delightful</p>
+            <p>Experience</p>
+        </div>
+        <div class="cards">
+            <div class="one">
+                <div class="card" *ngFor="let card of cards">
+                    <img src={{card.image}}>
+                    <div class="pop">
+                        <div class="txt">
+                            <p>{{card.txt1}}</p>
+                            <p>$12</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="two">
+                <div class="card" *ngFor="let card of cards">
+                    <img src={{card.image}}>
+                    <div class="pop">
+                        <div class="txt">
+                            <p>{{card.txt1}}</p>
+                            <p>$12</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
